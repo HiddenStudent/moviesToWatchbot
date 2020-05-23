@@ -12,7 +12,7 @@ Telegram::Bot::Client.run(ENV['TOKEN']) do |bot|
     else
       bot.api.send_message(
           chat_id: message.chat.id,
-          text: Faker::Movie.quote
+          text: '501 NOT IMPLEMENTED!'
       )
     end
   end
