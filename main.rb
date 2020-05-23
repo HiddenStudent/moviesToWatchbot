@@ -1,8 +1,7 @@
 require 'telegram/bot'
 require 'faker'
-require_relative 'secret/secrets'
 
-Telegram::Bot::Client.run(Secrets::TOKEN) do |bot|
+Telegram::Bot::Client.run(ENV['TOKEN']) do |bot|
   bot.listen do |message|
     case message.text
     when '/start', '/start start'
